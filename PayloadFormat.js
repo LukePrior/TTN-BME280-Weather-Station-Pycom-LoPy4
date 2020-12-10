@@ -12,9 +12,7 @@ function Decoder(bytes, port) {
     return f;
   }  
 
-  // Test with 0082d241 for 26.3134765625
   return {
-    // Take bytes 0 to 4 (not including), and convert to float:
     temperature: bytesToFloat(bytes.slice(0, 4)).toFixed(2)
     pressure: (bytesToFloat(bytes.slice(4, 8))/100).toFixed(2)
     humidity: bytesToFloat(bytes.slice(8, 12)).toFixed(0)
