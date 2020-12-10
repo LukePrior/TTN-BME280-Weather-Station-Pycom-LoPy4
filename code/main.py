@@ -48,7 +48,6 @@ s.setblocking(False)
 s.bind(1)
 
 # Main code loop for reading and uploading weather data
-
 while True:
     pycom.rgbled(0x00007d)
     print(bme280.values)
